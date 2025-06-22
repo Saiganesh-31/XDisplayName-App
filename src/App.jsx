@@ -9,12 +9,11 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFullName(`${firstName} ${lastName}`);
-    setFirstName("");
-    setLastname("");
   }
 
   return (
     <div>
+      <h1>Full Name Display</h1>
       <form onSubmit={handleSubmit}>
         <label>First Name:</label>
         <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} required/><br></br>
